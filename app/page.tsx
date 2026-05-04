@@ -18,6 +18,7 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item"
+import { CopyButton } from "@/components/ui/copy-button"
 
 export default function Page() {
   const invoices = [
@@ -96,8 +97,8 @@ export default function Page() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button variant="outline" size="sm">
-                Action
+              <Button size="icon">
+                <CopyButton size="sm"/>
               </Button>
             </ItemActions>
           </Item>
