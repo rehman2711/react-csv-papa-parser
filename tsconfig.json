@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "app/custom-components/data-table.tsx", "app/custom-components/copy-json.jsx"  ],
   "exclude": ["node_modules"]
 }

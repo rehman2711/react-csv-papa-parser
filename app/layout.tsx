@@ -1,8 +1,10 @@
-import { Geist, Geist_Mono, Inter, Oxanium } from "next/font/google"
+import { Geist_Mono, Inter, Oxanium } from "next/font/google"
+import { Toaster } from "@/components/ui/sonner"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 const oxaniumHeading = Oxanium({
   subsets: ["latin"],
@@ -34,7 +36,12 @@ export default function RootLayout({
       )}
     >
       <body className="mx-auto my-14 max-w-5xl">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <TooltipProvider>
+            <Toaster />
+            {children}
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
